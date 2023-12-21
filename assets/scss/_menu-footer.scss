@@ -1,0 +1,206 @@
+.receive-incentives{
+  background-image: url(../images/bg-form.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  .text{
+    text-align: center;
+    color: $light;
+    h4{
+      color: #FFF;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase; 
+      @include minWidth(768px){
+        font-size: 30px;
+      }
+    }
+    p{
+      color: #FFF;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.48px; 
+      margin-bottom: 0;
+      @include minWidth(768px){
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+  .form-discount{
+    form{
+      position: relative;
+    }
+    label{
+      width: 100%;
+    }
+    .wpcf7-email{
+      border-radius: 50px;
+      background: #FFF;
+      border: none;
+      height: 45px;
+      width: 100%;
+      padding: 12px 27px;
+      outline: none;
+    }
+    .wpcf7-submit{
+      position: absolute;
+      right: 19px;
+      top: 22px;
+      background-color: transparent;
+      text-indent: -9999px;
+      background-image: url(../images/ic-plane.svg);
+      height: 26px;
+      width: 26px;
+      white-space: nowrap;
+      border: none;
+      transform: translateY(-50%);
+    }
+    .wpcf7-spinner{
+      position: absolute;
+      right: 23px;
+      top: 20%;
+      @include minWidth(768px){
+        right: -50px;
+      }
+    }
+    .wpcf7-not-valid-tip{
+      margin-top: 5px;
+    }
+  }
+}
+.footer-middle{
+  padding-top: 58px;
+  padding-bottom: 0px;
+  @include minWidth(768px){
+    padding-bottom: 54px;
+  }
+  a{
+    &:hover{
+      color: $primary;
+    }
+  }
+  .info-company-ft{
+    border-bottom:  1px solid #DFDFDF;
+    padding-bottom: 21px;
+    margin-bottom: 29px;
+    @include minWidth(1200px){
+      border-bottom:  0px solid #DFDFDF;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+    .logo{
+      margin-bottom: 24px;
+    }
+    .list-info{
+      li{
+        display: flex;
+        align-items: center;
+        color: #404040;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 35px;
+        @include minWidth(480px){
+          font-size: 15px;
+        }
+        .icon{
+          margin-right: 7px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .info{
+      h5{
+        color: $primary;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 29px; 
+        text-transform: uppercase; 
+      }
+      p{
+        color: #404040;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 35px;
+        margin-bottom: 0;
+        svg{
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  .menu-ft{
+    list-style-type: circle;
+    li{
+      color: #8DC540;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 40px;
+      list-style-type: disc;
+      list-style-position: inside;
+      @include minWidth(576px){
+        font-size: 15px;
+      }
+    }
+  }
+  .maps{
+    border-top: 1px solid #DFDFDF;
+    padding-top: 34px;
+    margin-top: 16px;
+    @include minWidth(1200px){
+      border-top: 0px solid #DFDFDF;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    iframe{
+      border-radius: 20px;
+      width: 100%;
+      height: 270px;
+    }
+  }
+}
+.footer-bottom{
+  padding: 27px 0;
+  @include minWidth(768px){
+    border-top: 1px solid #DFDFDF;
+  }
+  .text{
+    color: #868686;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    @include minWidth(768px){
+      font-size: 16px;
+    }
+  }
+}
+.title-ft{
+  margin-bottom: 12px;
+  h4{
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase; 
+  }
+  .line{
+    background-color: #CFCFCF;
+    height: 1px;
+    position: relative;
+    width: 70%;
+    @include minWidth(768px){
+      width: 100%;
+    }
+    &::after{
+      content: '';
+      background-color: #8DC540;
+      height: 1px;
+      width: 70%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
