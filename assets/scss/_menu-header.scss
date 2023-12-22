@@ -1,42 +1,44 @@
 .header-top{
-  background-color: $green-light;
-  padding: 7px 0;
-  .text{
-    font-weight: 500;
-  }
-  .user-f{
-    li{
-      position: relative;
-      padding: 0 12px;
-      display: flex;
-      align-items: center;
-      &:first-child{
-        padding-left: 0;
-      }
-      &:not(:last-child){
-        &::after{
-          content: '|';
-          color: $green-2;
-          position: absolute;
-          right: -4px;
-        }
-      }
-      svg{
-        margin-right: 6px;
-      }
-      span{
-        font-size: 0.938rem;
-        color: $grey-7;
-        letter-spacing: -0.45px; 
-        font-weight: 400;
-      }
+  background-color: $violet-light;
+  padding: 10px 0 13px;
+  a{
+    transition: all 0.3s;
+    &:hover{
+      opacity: 0.6;
     }
   }
-  .social-f{
-    li{
-      &:not(:last-child){
-        margin-right: 6px;
+  .list-contact{
+    .item-contact{
+      margin-right: 19px;
+      .text{
+        margin-top: 5px;
+        color: $primary;
+        a{
+          color: $primary;
+          font-weight: 700; 
+        }
       }
+    }
+    .icon{
+      margin-right: 8px;
+    }
+  }
+  .feature{
+    a{
+      &:not(:first-child){
+        padding-left: 15px;
+      }
+      &:not(:last-child){
+        border-right: 1px solid $grey-1;
+        padding-right: 15px;
+      }
+      span{
+        color: $grey-2;
+        font-weight: 500; 
+      }
+    }
+    .icon{
+      margin-right: 4px;
     }
   }
 }
@@ -66,7 +68,7 @@
     }
   }
   .contact{
-    .list-icon{
+    .icon-call{
       .item{
         margin-right: 12px;
       }

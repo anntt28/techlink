@@ -7,15 +7,15 @@ html {
   scroll-behavior: smooth;
   font-size: 12px;
   @include minWidth(375px) {
-    font-size: 14px;
+    font-size: 13px;
   }
   @include minWidth(992px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 body {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  color: $grey-1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: $grey-2;
 }
 
 
@@ -45,7 +45,7 @@ body {
   @include minWidth(1440px) {
     padding: 0;
   }
-  max-width: 1300px;
+  max-width: 1360px;
   @include trans;
 }
 
