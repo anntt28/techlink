@@ -56,18 +56,40 @@
 .swiper-button-next,
 .swiper-button-prev
 {
-  width: 26px;
-  height: 26px;
+  width: 36px;
+  height: 36px;
   border-radius: 100%;
+  transition: all 0.3s;
+  &::before{
+    content: '';
+    background-image: url(../images/ic-next.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46px;
+    height: 46px;
+    display: block;
+    background-position: center;
+    transition: all 0.3s;
+  }
+  &:hover{
+    &::before{
+      background-image: url(../images/ic-next-orange.png);
+    }
+  }
   @include minWidth(576px) {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
 }
 .swiper-button-prev
 {
   left: -7px;
+  &:hover{
+    &::before{
+      transform: rotateZ(180deg);
+    }
+  }
   @include minWidth(480px) {
     left: -15px;
   }
@@ -75,12 +97,20 @@
     left: -39px;
   }
   @include minWidth(1500px) {
-    left: -55px;
+    left: 13px;
   }
 }
 .swiper-button-next
 {
   right: -7px;
+  &::before{
+    transform: rotateZ(180deg);
+  }
+  &:hover{
+    &::before{
+      transform: rotateZ(0deg);
+    }
+  }
   @include minWidth(480px) {
     right: -15px;
   }
@@ -88,7 +118,7 @@
     right: -39px;
   }
   @include minWidth(1500px) {
-    right: -55px;
+    right: 13px;
   }
 }
 .swiper-button-next,
