@@ -60,8 +60,35 @@ $(function () {
   spaceBetween: 20,
   slidesPerView: 3,
   navigation: {
-    nextEl: ".swiper-button-next-7",
-    prevEl: ".swiper-button-prev-7",
+    nextEl: ".swiper-button-next-4",
+    prevEl: ".swiper-button-prev-4",
+  },
+ });
+
+
+ var swiper8 = new Swiper(".slider-project", {
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 4,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'custom',
+    renderCustom: function (swiper, current, total) {
+        return current + ' / ' + (total); 
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-5",
+    prevEl: ".swiper-button-prev-5",
+  },
+ });
+ var swiper9 = new Swiper(".slider-customer", {
+  loop: true,
+  spaceBetween: 12,
+  slidesPerView: 6,
+  navigation: {
+    nextEl: ".swiper-button-next-6",
+    prevEl: ".swiper-button-prev-6",
   },
  });
  $('.content-page-cate-pr .woocommerce-ordering input[type="radio"]').each(function(index) {
@@ -152,7 +179,14 @@ $('.table-of-content li a').click(function(){
   $("#topicModal").removeClass("show");
   $("#sendSuccess").removeClass("show");
  });
-
+ $(window).scroll(function () {
+  const scroll = $(window).scrollTop();
+  if (scroll >= 10) {
+    $(".header-bottom").addClass("show-a");
+  } else {
+    $(".header-bottom").removeClass("show-a");
+  }
+});
  document.getElementById("chooseFile").onchange = function () {
   document.getElementById("chooseFile").value = this.value.replace(
    "C:\\fakepath\\",

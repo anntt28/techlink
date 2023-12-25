@@ -528,6 +528,7 @@ textarea {
 .btn-read-all-violet{
   text-transform: uppercase;
   border-radius: 5px;
+  color: #9360BC;
   border: 1px solid #9360BC;
   background: #FFF; 
   width: 130px;
@@ -591,4 +592,56 @@ textarea {
     }
   }
  
+}
+.bg-linear-violet{
+  background: linear-gradient(56deg, #9360BC 18.08%, #A990BC 90.92%) !important;
+}
+.bg-linear-yellow{
+  background: linear-gradient(56deg, #E2974B 18.08%, #FCC581 90.92%) !important;
+}
+.bg-linear-blue{
+  background: linear-gradient(56deg, #4D76F2 18.08%, #BB4DE5 90.92%) !important;
+}
+.bg-linear-pink{
+  background: linear-gradient(56deg, #E35EAC 18.08%, #FECB52 90.92%) !important;
+}
+.btn-yellow-all{
+  width: 140px;
+  height: 35px; 
+  border-radius: 5px;
+  background: linear-gradient(89deg, #FD8606 0.54%, #FFD652 99.09%);
+  color: $light;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  span{
+    margin-top: -4px;
+    margin-left: 8px;
+  }
+  &:hover{
+    color: $light;
+    opacity: 0.6;
+  }
+}
+.btn-orange-border{
+  width: 140px;
+  height: 35px; 
+  border-radius: 5px;
+  border: 1px solid #FF8F00;
+  color: #FF8F00; 
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  span{
+    margin-top: -4px;
+    margin-left: 8px;
+  }
+  &:hover{
+    color: #FF8F00; 
+    opacity: 0.6;
+  }
 }
