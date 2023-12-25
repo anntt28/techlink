@@ -91,6 +91,17 @@ $(function () {
     prevEl: ".swiper-button-prev-6",
   },
  });
+ $(window).scroll(function() {
+  if ($(window).scrollTop() < 300) {
+    $('.btn-back-to-top').addClass('hidden');
+  } else {
+    $('.btn-back-to-top').removeClass('hidden');
+  }
+});
+ $('.btn-back-to-top').on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
  $('.content-page-cate-pr .woocommerce-ordering input[type="radio"]').each(function(index) {
   $(this).next('label').addBack().wrapAll("<div class='button-box'></div>");
 });
