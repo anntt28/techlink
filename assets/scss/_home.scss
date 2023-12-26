@@ -1,33 +1,60 @@
+.banner-top,
+.banner-multi{
+    .container-fluid{
+        @include maxWidth(576px) {
+            padding: 0;
+        }
+    }
+}
 .banner-top{
     .box-menu-category{
-        flex-shrink: 0;
-        width: 23%;
-        min-width: 304px;
+        display: none;
+        @include minWidth(1024px) {
+            display: block;
+            flex-shrink: 0;
+            width: 23%;
+            min-width: 304px;
+        }
     }
     .content-banner-top{
         display: flex;
-        padding-top: 15px;
+        @include minWidth(1024px) {
+            padding-top: 15px;
+        }
     }
     .content-slider-top{
-        width: 77%;
-        padding-left: 6px;
+        width: 100%;
+        @include minWidth(1024px) {
+            width: 77%;
+            padding-left: 6px;
+        }
     }
 }
 .slider-banner-top{
     .swiper-slide{
         .img{
+            padding-top: 34.6%;
             display: block;
-            height: 477px;
+            @include minWidth(1024px) {
+                padding-top: 45.7%;
+            }
         }
     }
 }
 .banner-multi{
-    padding-top: 19px;
-    padding-bottom: 66px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @include minWidth(1024px) {
+        padding-top: 19px;
+        padding-bottom: 66px;
+    }
     .swiper-slide{
         .img{
             display: block;
-            height: 265px; 
+            padding-top: 58%;
+            @include minWidth(1024px) {
+                padding-top: 60%;
+            }
         }
     }
 }
@@ -36,21 +63,31 @@
         margin-right: 13px;
     }
     h2{
-        font-size: 30px; 
+        font-size: 20px;
         color: $grey-6;
         text-transform: uppercase;
         margin-bottom: 0;
         font-weight: 700;
+        @include minWidth(1024px) {
+            font-size: 30px; 
+        }
     }
 }
 .category-product{
     background-image: url(../images/bg-violet-category.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 56px;
-    padding-bottom: 65px;
+    padding-top: 13px;
+    padding-bottom: 26px;
+    @include minWidth(1024px) {
+        padding-top: 56px;
+        padding-bottom: 65px;
+    }
     .heading-techlink{
-        margin-bottom: 10px;
+        margin-bottom: 0px;
+        @include minWidth(1024px) {
+            margin-bottom: 10px;
+        }
         h2{
             color: $light;
         }
@@ -72,10 +109,16 @@
     height: 100%;
     padding-left: 3px;
     padding-right: 3px;
-    padding-top: 22px;
+    padding-top: 10px;
+    @include minWidth(1024px) {
+        padding-top: 22px;
+    }
     .swiper-wrapper{
-        height: 425px;
+        height: 390px;
         border-left: 1px solid #9360BC; 
+        @include minWidth(768px) {
+            height: 425px;
+        }
     }
     .swiper-slide{
         text-align: center;
@@ -108,8 +151,12 @@
             position: relative;
             &:hover{
                 background-color: $violet-1;
-                height: 110%;
-                margin-top: -11%;
+                height: 105%;
+                margin-top: -5%;
+                @include minWidth(576px) {
+                    height: 110%;
+                    margin-top: -11%;
+                }
                 &::after{
                     content: '';
                     height: 100%;
@@ -157,17 +204,21 @@
     }
     .title{
         margin-top: 12px;
-        font-size: 15px; 
+        font-size: 11px; 
         color: $light;
         font-weight: 500; 
-        line-height: 25px;
+        line-height: 14px;
         overflow: hidden;
         text-overflow: ellipsis;
-        line-height: 25px;
         -webkit-line-clamp: 2;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         transition: all 0.3s;
+        padding: 0 7px;
+        @include minWidth(1024px) {
+            font-size: 15px;
+            line-height: 25px;
+        }
     }
 }
 .box-slide-c{
@@ -195,9 +246,13 @@
     }
 }
 .product-tab{
-    padding-top: 59px;
+    padding-top: 17px;
     padding-bottom: 60px;
     position: relative;
+    @include minWidth(1024px) {
+        padding-top: 59px;
+        padding-bottom: 60px;
+    }
     .btn-head{
         margin-bottom: 16px;
     }
@@ -206,14 +261,12 @@
     }
     .banner-two{
         margin-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
         .img{
             padding-top: 39%;
+            display: block;
         }
      }
-     .box-list-product-2{
+    .box-list-product-2{
         .banner{
             width: 538px;
             img{
@@ -221,8 +274,14 @@
                 height: 100%;
             }
         }
-        .product-list-content{
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+    .product-list-content{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            @include minWidth(768px) {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @include minWidth(1024px) {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
         }
      }
      .box-list-product-3{
@@ -277,17 +336,59 @@
         padding-top: 10.7%;
     }
 }
+.box-product-list-mobile{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .product-list-content{
+        display: block !important; 
+        .item-pr-list{
+            .box-text{
+                margin-bottom: 0;
+                padding-bottom: 28px;
+            }
+            &:last-child{
+                border-left: 1px solid #EDEDED;
+                border-bottom: 1px solid #EDEDED;
+            }
+        }
+    }
+    .banner{
+        text-align: right;
+        width: 100% !important;
+        padding-top: 5px;
+    }
+}
+.box-banner-mobile{
+    @include maxWidth(480px) {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .btn-read-all-violet{
+        margin: 0 auto;
+        margin-top: 13px;
+    }
+}
 .box-list-product{
    .banner{
     width: 316px;
     flex-shrink: 0;
    }
    .product-list{
-    padding-left: 7px;
+    padding-left: 0px;
+    @include minWidth(1024px) {
+        padding-left: 7px;
+    }
    }
    .product-list-content{
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+            @include minWidth(768px) {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @include minWidth(1024px) {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+    
     .item-pr-list{
         border-right: 1px solid #EDEDED; 
         border-top: 1px solid #EDEDED; 

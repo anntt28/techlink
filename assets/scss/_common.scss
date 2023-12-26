@@ -38,7 +38,7 @@ body {
   background-color: #1d7af3 !important;
 }
 .container-fluid {
-  padding: 0 20px;
+  padding: 0 10px;
   @include minWidth(576px) {
     padding: 0 40px;
   }

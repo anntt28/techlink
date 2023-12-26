@@ -1,29 +1,58 @@
 .menu-aside {
   position: fixed;
-  top: 0;
+  top: 85px;
   right: -150%;
-  width: 90%;
+  width: 100%;
   max-width: 100%;
   height: calc(100vh);
-  background-color: $primary;
-  padding-top: 50px;
+  background-color: $light;
   z-index: 1050;
   @include trans;
 
   a,.menu-popup {
-    color: $light;
-    font-size: 16px;
+    color: $primary;
+    font-size: 13px;
     line-height: 130%;
     font-weight: 700;
   }
 
   li {
-    margin-bottom: 2rem;
+    a{
+      display: flex;
+      position: relative;
+      padding: 9px 11px;
+      .icon{
+        margin-right: 13px;
+      }
+    }
+    &:not(:last-child){
+      border-bottom: 1px solid #E7E7E7;
+    }
+    .icon-open{
+      position: absolute;
+      right: 9px;
+      top: 48%;
+      transform: translateY(-50%);
+      .open{
+        display: none;
+      }
+      &.show-ic{
+        .open{
+          display: block;
+        }
+        .close{
+          display: none;
+        }
+      }
+    }
   }
 
   .has-child {
-    .icon {
-      margin-left: 0.8rem;
+    .sub-menu{
+      margin-left: 35px;
+      li{
+        border-bottom: none;
+      }
     }
   }
 
@@ -55,7 +84,9 @@
     }
   }
 }
-
+.overflow-hidden-x{
+  overflow-x: hidden !important;
+}
 .backdrop {
   position: fixed;
   top: 0;
