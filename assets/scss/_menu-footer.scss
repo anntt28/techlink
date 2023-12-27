@@ -15,25 +15,35 @@
     background-color: $light;
     border-radius: 5px 5px 0px 0px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
-
-    @include minWidth(768px) {
+    position: relative;
+    top: -30px;
+    padding: 27px 23px;
+    @include minWidth(992px) {
       width: 42%;
       margin-top: -60px;
       padding: 46px 54px;
+      top: 0;
     }
 
     .logo-ft {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 14px;
+      @include minWidth(992px) {
+        margin-bottom: 25px;
+      }
     }
 
     .name-company {
       color: #6A3892;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 700;
-      margin-bottom: 33px;
+      margin-bottom: 18px;
       text-transform: uppercase;
       text-align: center;
+      @include minWidth(768px) {
+        font-size: 25px;
+        margin-bottom: 33px;
+      }
     }
 
     .des-1 {
@@ -59,8 +69,10 @@
     }
 
     .logo-certi {
-      padding-top: 29px;
-
+      padding-top: 19px;
+      @include minWidth(768px) {
+        padding-top: 29px;
+      }
       img {
         padding: 0 8px;
       }
@@ -68,9 +80,13 @@
   }
 
   .contact {
-    @include minWidth(768px) {
+    @include minWidth(768px){
+      margin-top: 50px;
+    }
+    @include minWidth(992px) {
       width: 58%;
       padding-left: 25px;
+      margin-top: 0;
     }
 
     .form-register-ft {
@@ -80,8 +96,10 @@
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
       justify-content: space-between;
       align-items: center;
-
+      text-align: center;
+      padding: 18px 13px;
       @include minWidth(768px) {
+        text-align: left;
         margin-top: -60px;
         padding: 42px 34px;
         margin-bottom: 53px;
@@ -114,8 +132,10 @@
           border: none;
           padding: 15px 23px;
           outline: none;
-          max-width: 376px;
-
+          width: 100%;
+          @include minWidth(768px) {
+            max-width: 376px;
+          }
           &::placeholder {
             font-size: 14px;
             color: #808080;
@@ -141,12 +161,12 @@
     }
 
     .menu-ft {
-      display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       margin-bottom: 47px;
 
       @include minWidth(768px) {
         gap: 60px;
+        display: grid !important;
       }
 
       a {
@@ -198,15 +218,23 @@
     }
 
     .ft-bottom {
-      border-top: 1px solid #9360BC;
       padding-top: 34px;
       padding-bottom: 35px;
-
+      flex-direction: column-reverse;
+      align-items: center;
+      @include minWidth(768px) {
+        border-top: 1px solid #9360BC;
+        flex-direction: row;
+      }
       span {
         color: $light;
       }
 
       .social-media {
+        margin-bottom: 10px;
+        @include minWidth(768px) {
+          margin-bottom: 0;
+        }
         a {
           &:not(:last-child) {
             margin-right: 8px;
@@ -275,10 +303,94 @@
   bottom: 50%;
   z-index: 999;
   .btn-call{
-    margin-top: -6px;
+    margin-top: -6.0000.0px;
   }
   a{
     width: 54px; 
     margin-bottom: 10px;
+  }
+}
+.menu-ft-mobile{
+  .card{
+    background-color: transparent;
+    border: none;
+    color: $light;
+    &:not(:last-child){
+      border-bottom: 1px solid #8750B2;
+    }
+    ul {
+      li {
+        display: flex;
+        margin-bottom: 20px;
+        &::before {
+          content: '';
+          width: 13px;
+          height: 16px;
+          background-image: url(/assets//images/ic-arrrow-yellow.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: block;
+          flex-shrink: 0;
+          margin-right: 5px;
+        }
+        a{
+          color: #D29EFC; 
+        }
+      }
+    }
+  }
+  .card-body{
+    padding: 0;
+  }
+  .card-header{
+    padding: 0;
+    background-color: transparent;
+    border-bottom: none;
+    .btn{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-transform: uppercase;
+      border: none;
+      span{
+        color: $light;
+      }
+      &.collapsed{
+        .icon-open{
+          .close-m{
+            display: none;
+          }
+          .open-m{
+            display: block;
+          }
+        }
+      }
+      .icon-open{
+        .open-m{
+          display: none;
+        }
+      }
+    }
+  }
+}
+.feature-mobile{
+  display: flex;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  background: #FFF;
+  box-shadow: 4px 0px 19px 0px rgba(0, 0, 0, 0.10);
+  padding: 15px 0;
+  z-index: 9999;
+  a{
+    width: 20%;
+    text-align: center;
+    span{
+      margin-top: 15px;
+      margin-top: 10px;
+      display: block;
+    }
   }
 }
