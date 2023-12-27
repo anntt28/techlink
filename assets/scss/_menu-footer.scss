@@ -224,7 +224,7 @@
       align-items: center;
       @include minWidth(768px) {
         border-top: 1px solid #9360BC;
-        flex-direction: column;
+        flex-direction: row;
       }
       span {
         color: $light;
@@ -334,7 +334,7 @@
           margin-right: 5px;
         }
         a{
-          color: #D29EFC; 
+          color: #D29EFC;
         }
       }
     }

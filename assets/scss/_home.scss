@@ -547,29 +547,29 @@
         }
         @include minWidth(1200px) {
             width: 20%;
-            max-width: 384px; 
+            max-width: 384px;
             padding-left: 65px;
         }
         h2{
-            font-size: 20px; 
+            font-size: 20px;
             font-weight: 700;
             line-height: 28px;
-            text-transform: uppercase; 
+            text-transform: uppercase;
             margin-bottom: 10px;
             @include minWidth(1200px) {
-                font-size: 48px; 
-                max-width: 191px;
+                font-size: 48px;
+                max-width: 194px;
                 line-height: 83px;
                 margin-bottom: 30px;
             }
         }
         p{
-            font-size: 13px; 
+            font-size: 13px;
             letter-spacing: 12px;
             text-transform: uppercase; 
             margin-bottom: 10px;
             @include minWidth(1200px) {
-                font-size: 20px; 
+                font-size: 20px;
                 margin-bottom: 139px;
             }
         }
@@ -677,7 +677,7 @@
                 border-bottom: 2px solid #ECECEC;
             }
             h2{
-                font-size: 20px; 
+                font-size: 20px;
                 font-weight: 700; 
                 color: #343434; 
                 text-transform: uppercase; 
@@ -686,10 +686,10 @@
                     content: '';
                     background-color: #FF8F00;
                     width: 137px;
-                    height: 2px; 
+                    height: 2px;
                     position: absolute;
                     left: 0;
-                    bottom: -9px;  
+                    bottom: -9px;
                     @include minWidth(768px) {
                         width: 100%;
                     }
@@ -707,7 +707,7 @@
                     }
                 }
                 @include minWidth(768px) {
-                    font-size: 30px; 
+                    font-size: 30px;
                 }
             }
         }
@@ -736,7 +736,7 @@
             border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb{
-        background: #888; 
+        background: #888;
     }
     &::-webkit-scrollbar{
         height: 4px;
@@ -936,7 +936,7 @@
         position: absolute;
         @include minWidth(992px) {
             position: relative;
-            
+
         }
     }
     h2{
@@ -959,7 +959,11 @@
             }
             img{
                 width: 166px;
-                height: 17px;         
+                height: 17px;
+                @include minWidth(992px) {
+                    width: initial;
+                    height: initial;
+                }
             }
             &:first-child{
                 left: 0;
@@ -986,7 +990,7 @@
     .item-logo-customer{
         height: 114px;
         border: 1px solid #ECECEC; 
-        border-radius: 5px; 
+        border-radius: 5px;
         img{
             height: 104px; 
             object-fit: contain;
@@ -1000,5 +1004,63 @@
     .swiper-button-next-6{
         right: -17px;
         top: 57%;
+    }
+}
+.box-slider-category-text{
+    .slider-category-text-3{
+        position: relative;
+        &::after{
+            content: '';
+            border-bottom: 1px solid #DADADA;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+        }
+        .swiper-slide {
+            border-radius: 5px 5px 0px 0px;
+            border-bottom: 0px solid #fff;
+            background: linear-gradient(180deg, #FFF 0%, #E9E9E9 100%);
+            margin-top: auto;
+            margin-bottom: -1px;
+            height: 43px;
+            transition: all 0.3s;
+            cursor: pointer;
+            &:hover{
+                .btn-category-text{
+                    color: #3C3C3C;
+                }
+            }
+            &.swiper-slide-thumb-active{
+                background: $light;
+                position: relative;
+                height: 49px;
+            }
+        }
+    }
+}
+.box-slider-content{
+    position: relative;
+    .slider-content-tab{
+        margin-top: 20px;
+        padding: 0 2px;
+    }
+    .swiper-button-prev{
+        left: -21px;
+    }
+    .swiper-button-next{
+        right: -11px;
+    }
+    .btn-violet-lineaer{
+        margin-top: 21px;
+    }
+}
+.list-product-tab{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    .item-pr-list{
+        border-left: 1px solid #EDEDED;
+        border-top: 1px solid #EDEDED;
+        border-bottom: 1px solid #EDEDED;
     }
 }

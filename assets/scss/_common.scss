@@ -645,3 +645,22 @@ textarea {
     opacity: 0.6;
   }
 }
+.btn-violet-lineaer{
+  width: 265px;
+  height: 38px;
+  text-transform: uppercase; 
+  color: $light;
+  border-radius: 5px;
+background: linear-gradient(88deg, #6A3892 4.71%, #9360BC 87.05%);
+display: inline-flex;
+justify-content: center;
+align-items: center;
+.icon{
+  margin-left: 8px;
+  margin-top: -3px;
+}
+&:hover{
+  color: $light;
+  opacity: 0.6;
+}
+}

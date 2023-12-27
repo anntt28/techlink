@@ -166,6 +166,38 @@ $(function () {
     },
   },
  });
+ var swiper11 = new Swiper(".slider-category-text-3", {
+  loop: false,
+  spaceBetween: 5,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: ".swiper-button-next-11",
+    prevEl: ".swiper-button-prev-11",
+  },
+  breakpoints: {
+    1500: {
+      spaceBetween: 5,
+      slidesPerView: 8,
+    },
+  },
+ });
+
+ var swiper12 = new Swiper(".slider-content-tab", {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  freeMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next-12",
+    prevEl: ".swiper-button-prev-12",
+  },
+  thumbs: {
+    swiper: swiper11,
+  },
+ });
  $(window).scroll(function() {
   if ($(window).scrollTop() < 300) {
     $('.btn-back-to-top, .btn-back-to-top-mobile').addClass('hidden');
