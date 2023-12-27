@@ -39,7 +39,7 @@ body {
 }
 .container-fluid {
   padding: 0 10px;
-  @include minWidth(576px) {
+  @include minWidth(768px) {
     padding: 0 40px;
   }
   @include minWidth(1440px) {
@@ -65,7 +65,7 @@ a {
 }
 
 p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 150%;
   @include minWidth(1200px) {
     font-size: 16px;

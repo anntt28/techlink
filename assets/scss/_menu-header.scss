@@ -379,6 +379,12 @@ body.menu-child-show{
   z-index: 999;
   background: #ffff;
   box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.10); 
+  &.show-a{
+    padding-bottom: 11px;
+    .search-product-m{
+      display: none !important;
+    }
+  }
   .icon-menu-mobile{
     cursor: pointer;
   }
