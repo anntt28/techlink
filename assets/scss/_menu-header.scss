@@ -13,6 +13,10 @@
       .text{
         margin-top: 5px;
         color: $primary;
+        font-size: 11px;
+        @include minWidth(1400px) {
+          font-size: 15px;
+        }
         a{
           color: $primary;
           font-weight: 700; 
@@ -26,15 +30,25 @@
   .feature{
     a{
       &:not(:first-child){
-        padding-left: 15px;
+        padding-left: 5px;
+        @include minWidth(1400px) {
+          padding-left: 15px;
+        }
       }
       &:not(:last-child){
         border-right: 1px solid $grey-1;
-        padding-right: 15px;
+        padding-right: 5px;
+        @include minWidth(1400px) {
+          padding-right: 15px;
+        }
       }
       span{
         color: $grey-2;
         font-weight: 500; 
+        font-size: 11px;
+        @include minWidth(1400px) {
+          font-size: 15px;
+        }
       }
     }
     .icon{
@@ -52,7 +66,7 @@
       border-radius: 5px; 
       border: 1px solid $grey-border;
       background: $light; 
-      padding: 12px 24px;
+      padding: 12px 68px 12px 24px;
       outline: none;
     }
     .btn-search{
@@ -142,7 +156,11 @@
     text-transform: uppercase;
     color: $light;
     padding: 8px 14px;
+    font-size: 11px;
     transition: all 0.3s;
+    @include minWidth(1400px) {
+      font-size: 15px; 
+    }
     &:hover{
       opacity: 0.6;
     }
@@ -170,12 +188,17 @@
           top: 90% !important;
           z-index: 99;
           .dropdown-item{
-            padding: 13px 20px;
+            padding: 11px 20px;
             border-top: 1px solid #ddd;
             color: $grey-7;
             display: flex;
             font-weight: 500; 
             position: relative;
+            font-size: 13px;
+            @include minWidth(1400px) {
+              font-size: 15px; 
+              padding: 13px 20px;
+            }
             &:active{
               background-color: #fff;
             }
@@ -282,7 +305,7 @@
             height: 100%;
             color: #FFF;
             font-family: Plus Jakarta Sans;
-            font-size: 17px;
+            font-size: 11px;
             font-weight: 500;
             line-height: 30px; 
             text-transform: uppercase; 
@@ -290,6 +313,9 @@
             display: flex;
             align-items: center;
             transition: all 0.3s;
+            @include minWidth(1500px) {
+              font-size: 17px;
+            }
             &:hover{
               opacity: 0.5;
             }

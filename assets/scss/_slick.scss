@@ -126,6 +126,9 @@
   display: none;
   @include minWidth(1024px) {
     display: block;
+    &.swiper-button-lock{
+      display: none;
+    }
   }
   &:after {
     color: $main-01;

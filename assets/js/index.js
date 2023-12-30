@@ -142,7 +142,7 @@ $(function () {
   },
   breakpoints: {
     768: {
-      spaceBetween: 0,
+      spaceBetween: 5,
       slidesPerView: 4,
     },
     1200: {
@@ -168,8 +168,8 @@ $(function () {
  });
  var swiper11 = new Swiper(".slider-category-text-3", {
   loop: false,
-  spaceBetween: 5,
-  slidesPerView: 4,
+  spaceBetween: 10,
+  slidesPerView: 3,
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
@@ -185,17 +185,51 @@ $(function () {
   },
  });
 
- var swiper12 = new Swiper(".slider-content-tab", {
+ var swiper12 = new Swiper(".slider-content-tab-1", {
   loop: false,
   slidesPerView: 1,
   spaceBetween: 0,
   freeMode: true,
+  allowTouchMove: false,
   navigation: {
     nextEl: ".swiper-button-next-12",
     prevEl: ".swiper-button-prev-12",
   },
   thumbs: {
     swiper: swiper11,
+  },
+ });
+ var swiper13 = new Swiper(".slider-category-text-4", {
+  loop: false,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: ".swiper-button-next-13",
+    prevEl: ".swiper-button-prev-13",
+  },
+  breakpoints: {
+    1500: {
+      spaceBetween: 5,
+      slidesPerView: 8,
+    },
+  },
+ });
+
+ var swiper14 = new Swiper(".slider-content-tab-2", {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  freeMode: true,
+  allowTouchMove: false,
+  navigation: {
+    nextEl: ".swiper-button-next-14",
+    prevEl: ".swiper-button-prev-14",
+  },
+  thumbs: {
+    swiper: swiper13,
   },
  });
  $(window).scroll(function() {
@@ -291,12 +325,18 @@ $('.table-of-content li a').click(function(){
  });
  $(window).scroll(function () {
   const scroll = $(window).scrollTop();
-  if (scroll >= 10) {
-    $(".header-bottom").addClass("show-a");
-    $(".header-bottom-mobile").addClass("show-a");
+  if (scroll >= 650) {
+      $(".header-bottom").addClass("show-a");
   } else {
-    $(".header-bottom").removeClass("show-a");
-    $(".header-bottom-mobile").removeClass("show-a");
+      $(".header-bottom").removeClass("show-a");
+  }
+});
+$(window).scroll(function () {
+  const scroll = $(window).scrollTop();
+  if (scroll >= 10) {
+      $(".header-bottom-mobile").addClass("show-a");
+  } else {
+      $(".header-bottom-mobile").removeClass("show-a");
   }
 });
  document.getElementById("chooseFile").onchange = function () {
